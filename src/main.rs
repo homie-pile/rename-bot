@@ -1,4 +1,3 @@
-#![doc = include_str!("../README.md")]
 #![deny(unsafe_code)]
 #![warn(
     clippy::all,
@@ -64,3 +63,33 @@
     nonstandard_style,
     rust_2018_idioms
 )]
+
+mod event_handler;
+
+use serenity::Client;
+use std::env;
+
+#[tokio::main]
+async fn main() {
+    // Enable logging
+    tracing_subscriber::fmt::init();
+
+    // Get the discord tokens
+    let discord_token = env::var("DISCORD_TOKEN").expect("$DISCORD_TOKEN not set");
+    let discord_app_id: u64 = env::var("DISCORD_APP_ID")
+        .expect("$DISCORD_APP_ID not set")
+        .parse()
+        .expect("Application ID is not valid");
+
+    // Set up the discord client
+    let mut discord_client = Client::builder(discord_token)
+        .event_handler(event_handler::Handler)
+        .application_id(discord_app_id)
+        .await
+        .unwrap();
+
+    // Start the client
+    if let Err(why) = discord_client.start().await {
+        println!("Client error: {:?}", why);
+    }
+}

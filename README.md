@@ -1,17 +1,4 @@
-# <repo_name>
-[![Crates.io](https://img.shields.io/crates/v/<crate_name>)](https://crates.io/crates/<crate_name>) 
-[![Docs.rs](https://docs.rs/<crate_name>/badge.svg)](https://docs.rs/<crate_name>) 
-[![Build](https://github.com/Ewpratten/<repo_name>/actions/workflows/build.yml/badge.svg)](https://github.com/Ewpratten/<repo_name>/actions/workflows/build.yml)
-[![Clippy](https://github.com/Ewpratten/<repo_name>/actions/workflows/clippy.yml/badge.svg)](https://github.com/Ewpratten/<repo_name>/actions/workflows/clippy.yml)
-[![Audit](https://github.com/Ewpratten/<repo_name>/actions/workflows/audit.yml/badge.svg)](https://github.com/Ewpratten/<repo_name>/actions/workflows/audit.yml)
+# rename-bot \[[Add to Server](https://discord.com/api/oauth2/authorize?client_id=912495511574048799&permissions=275079302144&scope=bot%20applications.commands)\]
+[![Build](https://github.com/Ewpratten/rename-bot/actions/workflows/build.yml/badge.svg)](https://github.com/Ewpratten/rename-bot/actions/workflows/build.yml)
+[![Clippy](https://github.com/Ewpratten/rename-bot/actions/workflows/clippy.yml/badge.svg)](https://github.com/Ewpratten/rename-bot/actions/workflows/clippy.yml)
 
-
-repo description
-
-## Installation
-
-This crate can be installed via `cargo` with:
-
-```sh
-cargo install <crate_name>
-```
